@@ -1,0 +1,53 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "tl_txt0",
+    "position":  {
+                     "x":  28,
+                     "y":  100,
+                     "z":  2000,
+                     "height":  72,
+                     "width":  161.33333333333334,
+                     "tabOrder":  2000
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "2008 · Global financial crisis",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                 "horizontalTextAlignment":  "center"
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "COLCAP fell 18.98% in October.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "8pt",
+                                                                                                                                        "color":  "#52514e"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                 "horizontalTextAlignment":  "center"
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

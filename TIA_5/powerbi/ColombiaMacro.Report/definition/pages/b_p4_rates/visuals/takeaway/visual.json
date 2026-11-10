@@ -1,0 +1,84 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "takeaway",
+    "position":  {
+                     "x":  24,
+                     "y":  590,
+                     "z":  1900,
+                     "height":  110,
+                     "width":  1016,
+                     "tabOrder":  1900
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "KEY TAKEAWAY",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#52514e",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Correlation rises from 0.80 in the same month to 0.88 six months later. In 2022, inflation averaged 10.15% against a 7.46% policy rate, a negative real rate. By 2024 it was 6.63% against 11.33%. This is consistent with a central bank reacting with a delay, but correlation between trending series doesn\u0027t prove cause.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "11pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "background":  [
+                                                                     {
+                                                                         "properties":  {
+                                                                                            "color":  {
+                                                                                                          "solid":  {
+                                                                                                                        "color":  {
+                                                                                                                                      "expr":  {
+                                                                                                                                                   "Literal":  {
+                                                                                                                                                                   "Value":  "\u0027#f0efec\u0027"
+                                                                                                                                                               }
+                                                                                                                                               }
+                                                                                                                                  }
+                                                                                                                    }
+                                                                                                      },
+                                                                                            "transparency":  {
+                                                                                                                 "expr":  {
+                                                                                                                              "Literal":  {
+                                                                                                                                              "Value":  "0D"
+                                                                                                                                          }
+                                                                                                                          }
+                                                                                                             },
+                                                                                            "show":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "true"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     }
+                                                                                        }
+                                                                     }
+                                                                 ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}

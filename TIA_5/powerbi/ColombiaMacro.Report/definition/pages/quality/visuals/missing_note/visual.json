@@ -1,0 +1,156 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "missing_note",
+    "position":  {
+                     "x":  24,
+                     "y":  296,
+                     "z":  1600,
+                     "height":  132,
+                     "width":  604,
+                     "tabOrder":  1600
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "MISSING DATA: IDENTIFY, EXPLAIN, ACT",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#52514e",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Identify: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "1 of 1,561 monthly cells is empty (0.06%), the January 2008 COLCAP return. GDP has none.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Why: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "a return needs the previous month, which predates the index. Older gaps are series start dates.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Action: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "no imputation. Filling a value that cannot exist would invent data.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Impact: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "returns have 222 observations instead of 223, and pre-2008 history is left out.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "background":  [
+                                                                     {
+                                                                         "properties":  {
+                                                                                            "color":  {
+                                                                                                          "solid":  {
+                                                                                                                        "color":  {
+                                                                                                                                      "expr":  {
+                                                                                                                                                   "Literal":  {
+                                                                                                                                                                   "Value":  "\u0027#f0efec\u0027"
+                                                                                                                                                               }
+                                                                                                                                               }
+                                                                                                                                  }
+                                                                                                                    }
+                                                                                                      },
+                                                                                            "transparency":  {
+                                                                                                                 "expr":  {
+                                                                                                                              "Literal":  {
+                                                                                                                                              "Value":  "0D"
+                                                                                                                                          }
+                                                                                                                          }
+                                                                                                             },
+                                                                                            "show":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "true"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     }
+                                                                                        }
+                                                                     }
+                                                                 ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}

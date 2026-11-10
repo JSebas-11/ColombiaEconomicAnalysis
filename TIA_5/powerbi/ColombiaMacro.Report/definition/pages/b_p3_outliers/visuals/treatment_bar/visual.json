@@ -1,0 +1,86 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "treatment_bar",
+    "position":  {
+                     "x":  1060,
+                     "y":  396,
+                     "z":  4000,
+                     "height":  304,
+                     "width":  4,
+                     "tabOrder":  4000
+                 },
+    "visual":  {
+                   "visualType":  "basicShape",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "shapeType":  {
+                                                                                            "expr":  {
+                                                                                                         "Literal":  {
+                                                                                                                         "Value":  "\u0027rectangle\u0027"
+                                                                                                                     }
+                                                                                                     }
+                                                                                        }
+                                                                      }
+                                                   }
+                                               ],
+                                   "fill":  [
+                                                {
+                                                    "properties":  {
+                                                                       "fillColor":  {
+                                                                                         "solid":  {
+                                                                                                       "color":  {
+                                                                                                                     "expr":  {
+                                                                                                                                  "Literal":  {
+                                                                                                                                                  "Value":  "\u0027#0b0b0b\u0027"
+                                                                                                                                              }
+                                                                                                                              }
+                                                                                                                 }
+                                                                                                   }
+                                                                                     },
+                                                                       "transparency":  {
+                                                                                            "expr":  {
+                                                                                                         "Literal":  {
+                                                                                                                         "Value":  "0D"
+                                                                                                                     }
+                                                                                                     }
+                                                                                        }
+                                                                   }
+                                                }
+                                            ],
+                                   "line":  [
+                                                {
+                                                    "properties":  {
+                                                                       "weight":  {
+                                                                                      "expr":  {
+                                                                                                   "Literal":  {
+                                                                                                                   "Value":  "0D"
+                                                                                                               }
+                                                                                               }
+                                                                                  },
+                                                                       "transparency":  {
+                                                                                            "expr":  {
+                                                                                                         "Literal":  {
+                                                                                                                         "Value":  "100D"
+                                                                                                                     }
+                                                                                                     }
+                                                                                        },
+                                                                       "lineColor":  {
+                                                                                         "solid":  {
+                                                                                                       "color":  {
+                                                                                                                     "expr":  {
+                                                                                                                                  "Literal":  {
+                                                                                                                                                  "Value":  "\u0027#0b0b0b\u0027"
+                                                                                                                                              }
+                                                                                                                              }
+                                                                                                                 }
+                                                                                                   }
+                                                                                     }
+                                                                   }
+                                                }
+                                            ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

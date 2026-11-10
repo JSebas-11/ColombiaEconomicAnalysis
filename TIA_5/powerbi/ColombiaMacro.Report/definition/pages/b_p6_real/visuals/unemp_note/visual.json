@@ -1,0 +1,40 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "unemp_note",
+    "position":  {
+                     "x":  324,
+                     "y":  84,
+                     "z":  1700,
+                     "height":  22,
+                     "width":  190,
+                     "tabOrder":  1700
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Peak 21.97%, May 2020",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#e34948",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                 "horizontalTextAlignment":  "right"
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

@@ -1,0 +1,147 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "outlier_note",
+    "position":  {
+                     "x":  652,
+                     "y":  494,
+                     "z":  2300,
+                     "height":  198,
+                     "width":  604,
+                     "tabOrder":  2300
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "OUTLIERS: INVESTIGATE AND DECIDE",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#52514e",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Investigate: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "they cluster in known episodes: the 2008 crisis, the COVID crash (COLCAP −27.48%, unemployment 21.97%), the 2022 election sell-off, the 2022-23 inflation peak (13.34%) and record highs in January 2026.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Errors? None found. Market and GDP extremes match press and DANE reports.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Decision: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "keep all 50. Removing them would understate risk and erase the episodes the analysis is about.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "Impact: ",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "value":  "averages stay sensitive to extremes, so the median is shown next to the mean.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "10pt",
+                                                                                                                                        "color":  "#0b0b0b"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ]
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "background":  [
+                                                                     {
+                                                                         "properties":  {
+                                                                                            "color":  {
+                                                                                                          "solid":  {
+                                                                                                                        "color":  {
+                                                                                                                                      "expr":  {
+                                                                                                                                                   "Literal":  {
+                                                                                                                                                                   "Value":  "\u0027#f0efec\u0027"
+                                                                                                                                                               }
+                                                                                                                                               }
+                                                                                                                                  }
+                                                                                                                    }
+                                                                                                      },
+                                                                                            "transparency":  {
+                                                                                                                 "expr":  {
+                                                                                                                              "Literal":  {
+                                                                                                                                              "Value":  "0D"
+                                                                                                                                          }
+                                                                                                                          }
+                                                                                                             },
+                                                                                            "show":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "true"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     }
+                                                                                        }
+                                                                     }
+                                                                 ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}

@@ -1,0 +1,53 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "tl_txt5",
+    "position":  {
+                     "x":  874.66666666666674,
+                     "y":  100,
+                     "z":  3000,
+                     "height":  72,
+                     "width":  161.33333333333334,
+                     "tabOrder":  3000
+                 },
+    "visual":  {
+                   "visualType":  "textbox",
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "paragraphs":  [
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "2026 · Record highs",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "9pt",
+                                                                                                                                        "color":  "#0b0b0b",
+                                                                                                                                        "fontWeight":  "bold"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                 "horizontalTextAlignment":  "center"
+                                                                                             },
+                                                                                             {
+                                                                                                 "textRuns":  [
+                                                                                                                  {
+                                                                                                                      "value":  "COLCAP rose 19.67% in January, with 5 months above the fence.",
+                                                                                                                      "textStyle":  {
+                                                                                                                                        "fontFamily":  "Segoe UI",
+                                                                                                                                        "fontSize":  "8pt",
+                                                                                                                                        "color":  "#52514e"
+                                                                                                                                    }
+                                                                                                                  }
+                                                                                                              ],
+                                                                                                 "horizontalTextAlignment":  "center"
+                                                                                             }
+                                                                                         ]
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

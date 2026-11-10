@@ -1,0 +1,182 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "returns",
+    "position":  {
+                     "x":  532,
+                     "y":  80,
+                     "z":  1700,
+                     "height":  250,
+                     "width":  508,
+                     "tabOrder":  1700
+                 },
+    "visual":  {
+                   "visualType":  "clusteredColumnChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "DimDate"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "Date"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "DimDate.Date",
+                                                                                             "nativeQueryRef":  "Date",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Measure":  {
+                                                                                                                    "Expression":  {
+                                                                                                                                       "SourceRef":  {
+                                                                                                                                                         "Entity":  "_Measures"
+                                                                                                                                                     }
+                                                                                                                                   },
+                                                                                                                    "Property":  "COLCAP Monthly Return"
+                                                                                                                }
+                                                                                                },
+                                                                                      "queryRef":  "_Measures.COLCAP Monthly Return",
+                                                                                      "nativeQueryRef":  "COLCAP Monthly Return"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Column":  {
+                                                                                                      "Expression":  {
+                                                                                                                         "SourceRef":  {
+                                                                                                                                           "Entity":  "DimDate"
+                                                                                                                                       }
+                                                                                                                     },
+                                                                                                      "Property":  "Date"
+                                                                                                  }
+                                                                                   },
+                                                                         "direction":  "Ascending"
+                                                                     }
+                                                                 ]
+                                                    }
+                             },
+                   "objects":  {
+                                   "dataPoint":  [
+                                                     {
+                                                         "properties":  {
+                                                                            "fill":  {
+                                                                                         "solid":  {
+                                                                                                       "color":  {
+                                                                                                                     "expr":  {
+                                                                                                                                  "Measure":  {
+                                                                                                                                                  "Expression":  {
+                                                                                                                                                                     "SourceRef":  {
+                                                                                                                                                                                       "Entity":  "_Measures"
+                                                                                                                                                                                   }
+                                                                                                                                                                 },
+                                                                                                                                                  "Property":  "Return Color"
+                                                                                                                                              }
+                                                                                                                              }
+                                                                                                                 }
+                                                                                                   }
+                                                                                     }
+                                                                        },
+                                                         "selector":  {
+                                                                          "data":  [
+                                                                                       {
+                                                                                           "dataViewWildcard":  {
+                                                                                                                    "matchingOption":  1
+                                                                                                                }
+                                                                                       }
+                                                                                   ]
+                                                                      }
+                                                     }
+                                                 ],
+                                   "legend":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "show":  {
+                                                                                      "expr":  {
+                                                                                                   "Literal":  {
+                                                                                                                   "Value":  "false"
+                                                                                                               }
+                                                                                               }
+                                                                                  }
+                                                                     }
+                                                  }
+                                              ],
+                                   "valueAxis":  [
+                                                     {
+                                                         "properties":  {
+                                                                            "showAxisTitle":  {
+                                                                                                  "expr":  {
+                                                                                                               "Literal":  {
+                                                                                                                               "Value":  "true"
+                                                                                                                           }
+                                                                                                           }
+                                                                                              },
+                                                                            "titleText":  {
+                                                                                              "expr":  {
+                                                                                                           "Literal":  {
+                                                                                                                           "Value":  "\u0027% per month\u0027"
+                                                                                                                       }
+                                                                                                       }
+                                                                                          }
+                                                                        }
+                                                     }
+                                                 ],
+                                   "categoryAxis":  [
+                                                        {
+                                                            "properties":  {
+                                                                               "showAxisTitle":  {
+                                                                                                     "expr":  {
+                                                                                                                  "Literal":  {
+                                                                                                                                  "Value":  "false"
+                                                                                                                              }
+                                                                                                              }
+                                                                                                 }
+                                                                           }
+                                                        }
+                                                    ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "fontSize":  {
+                                                                                                        "expr":  {
+                                                                                                                     "Literal":  {
+                                                                                                                                     "Value":  "11D"
+                                                                                                                                 }
+                                                                                                                 }
+                                                                                                    },
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027COLCAP monthly return (black = outside the IQR fences)\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}

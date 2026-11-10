@@ -213,6 +213,25 @@ table _Measures
 		displayFolder: Terms
 		lineageTag: f9630e9f-d3b3-43fe-8a4c-0703d4148c1b
 
+	measure 'Coverage %' = SUM ( CoverageByYear[CoveragePercent] )
+		formatString: 0
+		displayFolder: Statistics
+
+	measure 'Real Rate Color' = IF ( [Real Policy Rate] < 0, "#e34948", "#2a78d6" )
+		displayFolder: Colors
+
+	measure 'Return Color' = VAR r = [COLCAP Monthly Return] RETURN IF ( r < -11.92 || r > 13.45, "#0b0b0b", "#6250d6" )
+		displayFolder: Colors
+
+	measure 'Outlier Color' = IF ( [Outliers] > 0, "#0b0b0b", SWITCH ( SELECTEDVALUE ( DimSeries[SeriesKey] ), "Inflation YoY", "#eb6834", "Policy Rate", "#2a78d6", "TRM", "#008300", "COLCAP", "#6250d6", "COLCAP Monthly Return", "#6250d6", "Unemployment Rate", "#e34948", "Occupation Rate", "#e87ba4", "Real GDP Growth", "#1baf7a", "#52514e" ) )
+		displayFolder: Colors
+
+	measure 'Coverage Color' = VAR c = [Coverage %] RETURN SWITCH ( TRUE (), ISBLANK ( c ), BLANK (), c >= 100, "#2a78d6", c >= 50, "#7fb0e8", c > 0, "#cfe1f7", "#ffffff" )
+		displayFolder: Colors
+
+	measure 'Coverage Font Color' = IF ( [Coverage %] >= 100, "#ffffff", "#0b0b0b" )
+		displayFolder: Colors
+
 	column Placeholder
 		dataType: string
 		isHidden

@@ -1,0 +1,201 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+    "name":  "coverage",
+    "position":  {
+                     "x":  24,
+                     "y":  198,
+                     "z":  2600,
+                     "height":  160,
+                     "width":  1016,
+                     "tabOrder":  2600
+                 },
+    "visual":  {
+                   "visualType":  "pivotTable",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Rows":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Column":  {
+                                                                                                                      "Expression":  {
+                                                                                                                                         "SourceRef":  {
+                                                                                                                                                           "Entity":  "DimSeries"
+                                                                                                                                                       }
+                                                                                                                                     },
+                                                                                                                      "Property":  "SeriesKey"
+                                                                                                                  }
+                                                                                                   },
+                                                                                         "queryRef":  "DimSeries.SeriesKey",
+                                                                                         "nativeQueryRef":  "SeriesKey",
+                                                                                         "displayName":  "Series",
+                                                                                         "active":  true
+                                                                                     }
+                                                                                 ]
+                                                             },
+                                                    "Columns":  {
+                                                                    "projections":  [
+                                                                                        {
+                                                                                            "field":  {
+                                                                                                          "Column":  {
+                                                                                                                         "Expression":  {
+                                                                                                                                            "SourceRef":  {
+                                                                                                                                                              "Entity":  "CoverageByYear"
+                                                                                                                                                          }
+                                                                                                                                        },
+                                                                                                                         "Property":  "Year"
+                                                                                                                     }
+                                                                                                      },
+                                                                                            "queryRef":  "CoverageByYear.Year",
+                                                                                            "nativeQueryRef":  "Year",
+                                                                                            "displayName":  "Year",
+                                                                                            "active":  true
+                                                                                        }
+                                                                                    ]
+                                                                },
+                                                    "Values":  {
+                                                                   "projections":  [
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Measure":  {
+                                                                                                                         "Expression":  {
+                                                                                                                                            "SourceRef":  {
+                                                                                                                                                              "Entity":  "_Measures"
+                                                                                                                                                          }
+                                                                                                                                        },
+                                                                                                                         "Property":  "Coverage %"
+                                                                                                                     }
+                                                                                                     },
+                                                                                           "queryRef":  "_Measures.Coverage %",
+                                                                                           "nativeQueryRef":  "Coverage %",
+                                                                                           "displayName":  "Coverage %"
+                                                                                       }
+                                                                                   ]
+                                                               }
+                                                }
+                             },
+                   "objects":  {
+                                   "values":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "fontSize":  {
+                                                                                          "expr":  {
+                                                                                                       "Literal":  {
+                                                                                                                       "Value":  "8D"
+                                                                                                                   }
+                                                                                                   }
+                                                                                      }
+                                                                     }
+                                                  },
+                                                  {
+                                                      "properties":  {
+                                                                         "backColor":  {
+                                                                                           "solid":  {
+                                                                                                         "color":  {
+                                                                                                                       "expr":  {
+                                                                                                                                    "Measure":  {
+                                                                                                                                                    "Expression":  {
+                                                                                                                                                                       "SourceRef":  {
+                                                                                                                                                                                         "Entity":  "_Measures"
+                                                                                                                                                                                     }
+                                                                                                                                                                   },
+                                                                                                                                                    "Property":  "Coverage Color"
+                                                                                                                                                }
+                                                                                                                                }
+                                                                                                                   }
+                                                                                                     }
+                                                                                       },
+                                                                         "fontColor":  {
+                                                                                           "solid":  {
+                                                                                                         "color":  {
+                                                                                                                       "expr":  {
+                                                                                                                                    "Measure":  {
+                                                                                                                                                    "Expression":  {
+                                                                                                                                                                       "SourceRef":  {
+                                                                                                                                                                                         "Entity":  "_Measures"
+                                                                                                                                                                                     }
+                                                                                                                                                                   },
+                                                                                                                                                    "Property":  "Coverage Font Color"
+                                                                                                                                                }
+                                                                                                                                }
+                                                                                                                   }
+                                                                                                     }
+                                                                                       }
+                                                                     },
+                                                      "selector":  {
+                                                                       "data":  [
+                                                                                    {
+                                                                                        "dataViewWildcard":  {
+                                                                                                                 "matchingOption":  1
+                                                                                                             }
+                                                                                    }
+                                                                                ],
+                                                                       "metadata":  "_Measures.Coverage %"
+                                                                   }
+                                                  }
+                                              ],
+                                   "columnHeaders":  [
+                                                         {
+                                                             "properties":  {
+                                                                                "fontSize":  {
+                                                                                                 "expr":  {
+                                                                                                              "Literal":  {
+                                                                                                                              "Value":  "8D"
+                                                                                                                          }
+                                                                                                          }
+                                                                                             }
+                                                                            }
+                                                         }
+                                                     ],
+                                   "rowHeaders":  [
+                                                      {
+                                                          "properties":  {
+                                                                             "fontSize":  {
+                                                                                              "expr":  {
+                                                                                                           "Literal":  {
+                                                                                                                           "Value":  "8D"
+                                                                                                                       }
+                                                                                                       }
+                                                                                          }
+                                                                         }
+                                                      }
+                                                  ],
+                                   "subTotals":  [
+                                                     {
+                                                         "properties":  {
+                                                                            "columnSubtotals":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "false"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                            "rowSubtotals":  {
+                                                                                                 "expr":  {
+                                                                                                              "Literal":  {
+                                                                                                                              "Value":  "false"
+                                                                                                                          }
+                                                                                                          }
+                                                                                             }
+                                                                        }
+                                                     }
+                                                 ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "false"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}
