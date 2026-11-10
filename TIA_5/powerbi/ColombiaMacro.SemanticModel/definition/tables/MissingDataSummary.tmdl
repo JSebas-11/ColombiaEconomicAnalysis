@@ -1,0 +1,60 @@
+table MissingDataSummary
+	lineageTag: 9c1bb3a8-f61d-4008-b7b5-6c9961ab656e
+
+	column SeriesKey
+		dataType: string
+		lineageTag: 4b3152fa-4d3f-45d3-920a-9558eb24a9b8
+		summarizeBy: none
+		sourceColumn: SeriesKey
+
+	column FirstAvailable
+		dataType: string
+		lineageTag: 6f434781-c025-4801-a9bf-b48b3112bf09
+		summarizeBy: none
+		sourceColumn: FirstAvailable
+
+	column ExpectedInWindow
+		dataType: int64
+		formatString: 0
+		lineageTag: 46406994-369a-44e0-8edb-a5e184039e79
+		summarizeBy: none
+		sourceColumn: ExpectedInWindow
+
+	column ObservedInWindow
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e5c6606-0183-4c6d-821a-2f5db6c81e6a
+		summarizeBy: none
+		sourceColumn: ObservedInWindow
+
+	column EmptyInWindow
+		dataType: int64
+		formatString: 0
+		lineageTag: e6292d40-aa6b-4a37-9fa1-92a2970cab90
+		summarizeBy: none
+		sourceColumn: EmptyInWindow
+
+	column PreWindowGap
+		dataType: string
+		lineageTag: 52e0320d-09d2-4ef2-a412-d98b93cff3bc
+		summarizeBy: none
+		sourceColumn: PreWindowGap
+
+	column TreatmentInWindow
+		dataType: string
+		lineageTag: a298f3e3-3325-41f7-956d-79bf4a1ba49d
+		summarizeBy: none
+		sourceColumn: TreatmentInWindow
+
+	partition MissingDataSummary = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "missing_data_summary.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"SeriesKey", type text}, {"FirstAvailable", type text}, {"ExpectedInWindow", Int64.Type}, {"ObservedInWindow", Int64.Type}, {"EmptyInWindow", Int64.Type}, {"PreWindowGap", type text}, {"TreatmentInWindow", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

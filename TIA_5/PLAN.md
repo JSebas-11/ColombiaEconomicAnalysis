@@ -3,7 +3,8 @@
 ## Current Status
 
 - Linux prep is done: data tables, DAX measures, theme and page-by-page spec are in `TIA_5/powerbi/`.
-- The Power BI report is not built yet. The DAX and theme have not been run in Power BI, because Desktop needs Windows.
+- Windows build in progress (Power BI Desktop 2.159). The report is saved as a Power BI Project (`ColombiaMacro.pbip`). Claude Code writes the semantic model (tables, types, relationships, sort-by, measures) as TMDL files, and the visuals are built by hand.
+- Deadline: 2026-11-11.
 - Analysis window: January 2008 to July 2026, 223 months and 74 quarters.
 
 ## Critical Decisions
@@ -14,6 +15,8 @@
 | Window 2008-01 to 2026-07 | First month every indicator exists, through the last full presidential term. |
 | Build in Power BI Desktop on the Windows partition | Power BI Desktop has no Linux version. |
 | Build visuals by hand, prepare everything else from Linux | Visuals are the graded part and the official MCP server doesn't touch them. |
+| Save as `.pbip` with a TMDL model, not `.pbix` | The model is text, so it is generated exactly from the spec, reviewable and tracked in git. |
+| Rename CSV columns that clash with measure names | `DimSeries` stats become `WindowObservations`, `WindowMean`, etc., and `CorrelationSummary[Observations]` becomes `PairedObservations`, so measures like `[Observations]` and `[Mean]` stay unambiguous. |
 | Presidential terms as a filter, data stays monthly | Aggregating to terms leaves 5 points per metric and hides the shocks. |
 | Term comparison shows start and end, not only averages | Averages hide direction, for example inflation under Duque and Petro. |
 | August belongs to the incoming president | Terms change on August 7. Q3 GDP follows its last month. |
@@ -91,8 +94,9 @@ Likely questions to rehearse:
 
 ## Open Items
 
-- Confirm with the professor: reuse of the TIA4 analysis, Banco de la República as a source (the activity links to datos abiertos Colombia), and the time limit (7 minutes in the activity, 8 in the rubric).
-- Find a source for what drove COLCAP's +19.67% in January 2026. Press confirms record highs that month, so it isn't an entry error, but no January-specific cause was found.
+- Confirmed: the TIA4 analysis and Banco de la República as a source can be used.
+- Time limit still unconfirmed (7 minutes in the activity, 8 in the rubric). Rehearse for 7.
+- COLCAP's +19.67% in January 2026 is confirmed exactly (close 2,474.76, a record) by Valora Analitik. It was a broad rally: Cementos Argos +28.44%, Grupo Cibest pref. +26.21%, Mineros +25.36%, Ecopetrol +22.99%, ISA +22.87%, with traded volume up 84% on December. No source names a single January cause. Analysts had flagged the 2026 elections and expected policy change as the main driver for the year. Say "broad-based rally ahead of the 2026 elections", not a specific trigger.
 
 ## Outlier Evidence
 
@@ -103,17 +107,19 @@ Likely questions to rehearse:
 | 2022-06 return (-17.49%) | Press reports a 17.5% fall in June, with a sharp drop after the election. | [Valora Analitik](https://www.valoraanalitik.com/?p=182152), [Bloomberg Línea](https://www.bloomberglinea.com/2022/06/21/bolsa-de-colombia-es-la-que-mas-cae-a-nivel-mundial-tras-triunfo-de-petro/) |
 | 2020-12 return (+14.3%) | Press reports the same monthly rise, and vaccine news brought inflows. | [Valora Analitik](https://www.valoraanalitik.com/bolsa-de-colombia-cerr-2020-con-altibajos-en-medio-de-la-crisis-colcap-cay-13-5/) |
 | 2026-01 COLCAP | All-time highs reported in January 2026. | [Trading Economics](https://tradingeconomics.com/colombia/stock-market/news/518814) |
+| 2026-01 return (+19.67%) | Same figure and close (2,474.76). Broad rally led by Cementos Argos, Grupo Cibest, Mineros, Ecopetrol and ISA; volume +84% vs December. | [Valora Analitik via Yahoo](https://es-us.noticias.yahoo.com/bolsa-colombia-comenz%C3%B3-2026-valorizaci%C3%B3n-121429626.html), [Bloomberg Línea (2026 outlook: elections)](https://www.bloomberglinea.com/latinoamerica/colombia/bolsa-colombiana-en-su-nivel-mas-alto-en-15-anos-que-la-esta-jalonando-y-que-se-espera-en-2026/) |
 | Term dates | De la Espriella took office on August 7, 2026, ending Petro's term. | [AP](https://www.djournal.com/news/nation-world/colombia-inaugurates-its-new-president-in-cali-in-photos/article_6c210a63-0704-51a8-b1b2-6c87da2780e1.html) |
 
 ## Next Steps
 
-1. Copy the whole `ColombiaEconomicAnalysis` project folder to Windows, so this plan, the spec and the data travel together. The repo has no remote and the TIA5 files are uncommitted, so copy the folder rather than relying on git.
-2. Install Power BI Desktop from the Microsoft Store, which keeps it updated.
-3. Follow `powerbi/DASHBOARD_SPEC.md`, starting with page 4 to settle the visual style. Save the report as `TIA_5/powerbi/ColombiaMacro.pbix`.
-4. Reconcile page 7 and the page 1 cards against the spec.
-5. Rehearse with a timer and export the PDF.
+1. ~~Copy the project to Windows and install Power BI Desktop.~~ Done.
+2. Create an empty `TIA_5/powerbi/ColombiaMacro.pbip` from Power BI Desktop with the setup options applied, then close Desktop.
+3. Claude Code writes the TMDL model into `ColombiaMacro.SemanticModel/definition/`. Reopen the project, refresh, and check the import checks in the spec.
+4. Build the visuals by hand following `powerbi/DASHBOARD_SPEC.md`, starting with page 4 to settle the visual style.
+5. Reconcile page 7 and the page 1 cards against the spec.
+6. Rehearse with a timer and export the PDF.
 
-**Resuming with Claude Code on Windows:** memory doesn't carry across machines. Start the session by asking Claude to read `TIA_5/PLAN.md` and `TIA_5/powerbi/DASHBOARD_SPEC.md`. For DAX or theme errors, paste the exact error message.
+**Resuming with Claude Code:** start the session by asking Claude to read `TIA_5/PLAN.md` and `TIA_5/powerbi/DASHBOARD_SPEC.md`. For DAX or theme errors, paste the exact error message. Close Power BI Desktop before Claude edits the `.SemanticModel` files, otherwise Desktop overwrites them on save.
 
 ## Lessons Learned
 

@@ -1,0 +1,32 @@
+relationship 03076685-1160-4b36-b480-8a47f215c856
+	fromColumn: FactMonthly.Date
+	toColumn: DimDate.Date
+
+relationship e3d873c1-b5a8-461e-a1d6-418b5285a8ce
+	fromColumn: FactQuarterly.Date
+	toColumn: DimDate.Date
+
+relationship 18f5bf0c-99bd-4258-801d-d37e6e095feb
+	fromColumn: FactMetricLong.Date
+	toColumn: DimDate.Date
+
+relationship 14c5886f-c90e-470d-b575-27181b4f0e24
+	fromColumn: FactOutliers.Date
+	toColumn: DimDate.Date
+
+relationship 4aa32aeb-6498-4edc-9603-9aaba19329a4
+	fromColumn: FactMetricLong.SeriesKey
+	toColumn: DimSeries.SeriesKey
+
+relationship 923f9f50-e744-460f-aae7-6e0ae65c7e97
+	fromColumn: FactOutliers.SeriesKey
+	toColumn: DimSeries.SeriesKey
+
+relationship 085e3820-7446-4966-8f39-7fb2387f4106
+	fromColumn: CoverageByYear.SeriesKey
+	toColumn: DimSeries.SeriesKey
+
+relationship c49a6f9b-e272-4c14-bae6-fd57e7037eae
+	fromColumn: MissingDataSummary.SeriesKey
+	toColumn: DimSeries.SeriesKey
+

@@ -13,6 +13,10 @@ Copy the whole `TIA_5/powerbi` folder to Windows first.
 
 ## 2. Model
 
+The model is predefined as TMDL in `ColombiaMacro.SemanticModel/definition/`: every import, type, relationship, sort-by and measure below already exists, so refresh and run the checks instead of building it. The steps below document it and serve as a manual fallback. The CSV folder is the `DataFolder` parameter (Transform data > Manage parameters), so change it if the project moves.
+
+Two sets of CSV columns are renamed in the model because their names clash with measures: `DimSeries` `Observations`, `Mean`, `Median`, `StdDev`, `Min`, `Max` become `WindowObservations`, `WindowMean`, `WindowMedian`, `WindowStdDev`, `WindowMin`, `WindowMax`, and `CorrelationSummary[Observations]` becomes `PairedObservations`. Fact `Date` columns and the fact-side keys are hidden, so always slice by `DimDate` and `DimSeries`.
+
 Import every CSV in `data/` except `term_summary_expected.csv`.
 
 | Table | File |
@@ -42,7 +46,7 @@ Leave `CorrelationSummary` and `CoverageByYear[Year]` unrelated to the calendar 
 - `DimDate[MonthLabel]` by `DimDate[Date]`
 - `DimSeries[SeriesKey]` by `DimSeries[SeriesOrder]`
 
-**Measures.** Create a table named `Measures` and add everything in `measures.dax`. Format rates with 2 decimals, and `TRM Change %` and `COLCAP Change %` as percentages with 1 decimal.
+**Measures.** Create a table named `_Measures` (`Measures` is a reserved name in Analysis Services and fails to load) and add everything in `measures.dax`. Format rates with 2 decimals and a literal `%` suffix (format string `0.00\%`, because the data stores 6.03, not 0.0603), and `TRM Change %` and `COLCAP Change %` as percentages with 1 decimal.
 
 ## 3. Global Interaction
 
@@ -174,7 +178,7 @@ The cards follow the term slicer, so they also show how many months each term co
 
 - Line chart: `DimDate[Date]`, `Inflation YoY` and `Policy Rate`, one % axis.
 - Column chart: `DimDate[Date]`, `Real Policy Rate`. Conditional color rules: below 0 `#e34948`, 0 or above `#2a78d6`. Keep the zero baseline.
-- Table from `CorrelationSummary`, filtered to `VariableX` Inflation YoY and `VariableY` Policy Rate: `LagMonths`, `Correlation`, `Observations`.
+- Table from `CorrelationSummary`, filtered to `VariableX` Inflation YoY and `VariableY` Policy Rate: `LagMonths`, `Correlation`, `PairedObservations` (rename the header to "Observations").
 
 **Takeaway:** Correlation rises from 0.80 in the same month to 0.88 six months later. In 2022, inflation averaged 10.15% against a 7.46% policy rate, a negative real rate. By 2024 it was 6.63% against 11.33%. This is consistent with a central bank reacting with a delay, but correlation between trending series doesn't prove cause.
 
