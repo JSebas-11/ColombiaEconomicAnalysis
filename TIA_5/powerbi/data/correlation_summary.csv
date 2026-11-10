@@ -1,0 +1,13 @@
+﻿VariableX,VariableY,LagMonths,Correlation,Observations
+Inflation YoY,Policy Rate,0,0.8,223
+Inflation YoY,Policy Rate,3,0.87,220
+Inflation YoY,Policy Rate,6,0.88,217
+Inflation YoY,Policy Rate,9,0.84,214
+Inflation YoY,Policy Rate,12,0.76,211
+Policy Rate,Inflation YoY,12,0.12,211
+TRM,Inflation YoY,0,0.58,223
+TRM,COLCAP,0,-0.14,223
+Policy Rate,COLCAP,0,-0.18,223
+Inflation YoY,COLCAP Monthly Return,0,-0.05,222
+Policy Rate,COLCAP Monthly Return,0,0.03,222
+Unemployment Rate,Occupation Rate,0,-0.83,223

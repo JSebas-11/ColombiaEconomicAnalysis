@@ -1,0 +1,101 @@
+-- Colombia Macro dashboard measures.
+-- Create them in a blank table named "Measures", one measure per block.
+-- Not executed outside Power BI: reconcile against term_summary_expected.csv and dim_series.csv.
+
+-- ===== Descriptive statistics (matrix by DimSeries[SeriesKey], responds to slicers) =====
+
+Observations = COUNTROWS ( FactMetricLong )
+
+Series Value = AVERAGE ( FactMetricLong[Value] )
+
+Mean = AVERAGE ( FactMetricLong[Value] )
+
+Median = MEDIAN ( FactMetricLong[Value] )
+
+Std Dev = STDEV.S ( FactMetricLong[Value] )
+
+Minimum = MIN ( FactMetricLong[Value] )
+
+Maximum = MAX ( FactMetricLong[Value] )
+
+Outliers = CALCULATE ( COUNTROWS ( FactMetricLong ), FactMetricLong[IsOutlier] = 1 ) + 0
+
+Outlier Marker = CALCULATE ( AVERAGE ( FactMetricLong[Value] ), FactMetricLong[IsOutlier] = 1 )
+
+-- ===== Base measures for charts =====
+
+Inflation YoY = AVERAGE ( FactMonthly[InflationYoY] )
+
+Policy Rate = AVERAGE ( FactMonthly[PolicyRate] )
+
+Real Policy Rate = AVERAGE ( FactMonthly[RealPolicyRate] )
+
+TRM = AVERAGE ( FactMonthly[TrmAverage] )
+
+TRM Rebased = AVERAGE ( FactMonthly[TrmRebased] )
+
+COLCAP = AVERAGE ( FactMonthly[ColcapIndex] )
+
+COLCAP Rebased = AVERAGE ( FactMonthly[ColcapRebased] )
+
+COLCAP Monthly Return = AVERAGE ( FactMonthly[ColcapMonthlyReturn] )
+
+Unemployment Rate = AVERAGE ( FactMonthly[UnemploymentRate] )
+
+Occupation Rate = AVERAGE ( FactMonthly[OccupationRate] )
+
+GDP Growth = AVERAGE ( FactQuarterly[RealGdpGrowth] )
+
+-- ===== KPI cards: latest value in the selection =====
+
+Inflation Latest = CALCULATE ( [Inflation YoY], LASTDATE ( DimDate[Date] ) )
+
+Policy Rate Latest = CALCULATE ( [Policy Rate], LASTDATE ( DimDate[Date] ) )
+
+TRM Latest = CALCULATE ( [TRM], LASTDATE ( DimDate[Date] ) )
+
+COLCAP Latest = CALCULATE ( [COLCAP], LASTDATE ( DimDate[Date] ) )
+
+Unemployment Latest = CALCULATE ( [Unemployment Rate], LASTDATE ( DimDate[Date] ) )
+
+GDP Growth Latest =
+CALCULATE (
+    [GDP Growth],
+    LASTNONBLANK ( DimDate[Date], CALCULATE ( COUNTROWS ( FactQuarterly ) ) )
+)
+
+-- ===== KPI cards: full window average, ignores slicers =====
+
+Inflation Window Avg = CALCULATE ( [Inflation YoY], ALL ( DimDate ) )
+
+Policy Rate Window Avg = CALCULATE ( [Policy Rate], ALL ( DimDate ) )
+
+TRM Window Avg = CALCULATE ( [TRM], ALL ( DimDate ) )
+
+COLCAP Window Avg = CALCULATE ( [COLCAP], ALL ( DimDate ) )
+
+Unemployment Window Avg = CALCULATE ( [Unemployment Rate], ALL ( DimDate ) )
+
+GDP Growth Window Avg = CALCULATE ( [GDP Growth], ALL ( DimDate ) )
+
+-- ===== Term comparison: first and last month of each term =====
+
+Inflation Start = CALCULATE ( [Inflation YoY], FIRSTDATE ( DimDate[Date] ) )
+
+Inflation End = CALCULATE ( [Inflation YoY], LASTDATE ( DimDate[Date] ) )
+
+Policy Rate Start = CALCULATE ( [Policy Rate], FIRSTDATE ( DimDate[Date] ) )
+
+Policy Rate End = CALCULATE ( [Policy Rate], LASTDATE ( DimDate[Date] ) )
+
+TRM Start = CALCULATE ( [TRM], FIRSTDATE ( DimDate[Date] ) )
+
+TRM End = CALCULATE ( [TRM], LASTDATE ( DimDate[Date] ) )
+
+TRM Change % = DIVIDE ( [TRM End], [TRM Start] ) - 1
+
+COLCAP Start = CALCULATE ( [COLCAP], FIRSTDATE ( DimDate[Date] ) )
+
+COLCAP End = CALCULATE ( [COLCAP], LASTDATE ( DimDate[Date] ) )
+
+COLCAP Change % = DIVIDE ( [COLCAP End], [COLCAP Start] ) - 1

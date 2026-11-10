@@ -1,0 +1,9 @@
+﻿SeriesKey,FirstAvailable,ExpectedInWindow,ObservedInWindow,EmptyInWindow,PreWindowGap,TreatmentInWindow
+Inflation YoY,Jul 1955,223,223,0,"Available since 1955, no gap in the window.",No empty cells in the window.
+Policy Rate,Apr 1999,223,223,0,The series used starts in April 1999.,No empty cells in the window.
+TRM,Nov 1991,223,223,0,"The series starts in late 1991, when the TRM was established.",No empty cells in the window.
+COLCAP,Jan 2008,223,223,0,The index starts in January 2008.,No empty cells in the window.
+COLCAP Monthly Return,Feb 2008,223,222,1,The index starts in January 2008.,"January 2008 stays empty: a return needs a prior month, which predates the index."
+Unemployment Rate,Jan 2001,223,223,0,The labor series starts in January 2001.,No empty cells in the window.
+Occupation Rate,Jan 2001,223,223,0,The labor series starts in January 2001.,No empty cells in the window.
+Real GDP Growth,2006-Q1,74,74,0,The quarterly series starts in 2006.,No empty cells in the window.

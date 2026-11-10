@@ -1,0 +1,47 @@
+{
+  "name": "Colombia Macro",
+  "dataColors": [
+    "#2a78d6",
+    "#eb6834",
+    "#1baf7a",
+    "#eda100",
+    "#e87ba4",
+    "#008300",
+    "#6250d6",
+    "#e34948"
+  ],
+  "background": "#fcfcfb",
+  "foreground": "#0b0b0b",
+  "tableAccent": "#2a78d6",
+  "good": "#0ca30c",
+  "neutral": "#fab219",
+  "bad": "#d03b3b",
+  "maximum": "#2a78d6",
+  "center": "#f0efec",
+  "minimum": "#e34948",
+  "textClasses": {
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 24, "color": "#0b0b0b" },
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#0b0b0b" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 11, "color": "#52514e" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#52514e" }
+  },
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#fcfcfb" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#f9f9f7" } }, "transparency": 0 }]
+      }
+    },
+    "*": {
+      "*": {
+        "border": [{ "show": false }],
+        "valueAxis": [{ "gridlineColor": { "solid": { "color": "#e1e0d9" } } }]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [{ "strokeWidth": 2 }]
+      }
+    }
+  }
+}

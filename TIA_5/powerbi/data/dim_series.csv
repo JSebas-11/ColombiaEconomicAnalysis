@@ -1,0 +1,9 @@
+﻿SeriesKey,SeriesOrder,Unit,Frequency,Observations,Mean,Median,StdDev,Min,MinPeriod,Max,MaxPeriod,Q1,Q3,IQR,LowerFence,UpperFence,OutlierCount,OutlierPercent
+Inflation YoY,1,%,Monthly,223,4.93,3.97,2.77,1.49,Nov 2020,13.34,Mar 2023,3.1,6.13,3.03,-1.44,10.67,14,6.28
+Policy Rate,2,%,Monthly,223,6.11,4.5,3.27,1.75,Sep 2020,13.25,May 2023,3.88,9.25,5.38,-4.19,17.31,0,0.0
+TRM,3,COP per USD,Monthly,223,2946.43,2961.0,917.98,1732.29,Jun 2008,4926.66,Nov 2022,1935.4,3788.82,1853.42,-844.74,6568.96,0,0.0
+COLCAP,4,Index points,Monthly,223,1452.25,1439.48,294.32,788.73,Oct 2008,2474.76,Jan 2026,1266.04,1635.7,369.66,711.56,2190.18,5,2.24
+COLCAP Monthly Return,5,%,Monthly,222,0.57,0.85,5.32,-27.48,Mar 2020,19.67,Jan 2026,-2.41,3.93,6.34,-11.92,13.45,5,2.25
+Unemployment Rate,6,%,Monthly,223,10.87,10.42,2.28,7.02,Nov 2025,21.97,May 2020,9.31,11.76,2.45,5.63,15.43,9,4.04
+Occupation Rate,7,%,Monthly,223,58.4,58.9,3.17,42.5,Apr 2020,64.01,Oct 2011,57.21,60.46,3.25,52.34,65.33,10,4.48
+Real GDP Growth,8,%,Quarterly,74,3.21,2.87,4.28,-16.74,2020-Q2,18.27,2021-Q2,1.67,4.23,2.55,-2.15,8.06,7,9.46
