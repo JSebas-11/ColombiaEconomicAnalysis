@@ -185,25 +185,6 @@ function Slicer([string]$ref, [string]$display, [string]$group) {
     drillFilterOtherVisuals = $true
   }
 }
-function CoverageMatrix([string]$title) {
-  [ordered]@{
-    visualType = 'pivotTable'
-    query = [ordered]@{ queryState = [ordered]@{
-      Rows = (Role @(Proj 'DimSeries.Serie' 'Serie' -active $true))
-      Columns = (Role @(Proj 'CoverageByYear.Year' 'Año' -active $true))
-      Values = (Role @(Proj 'Coverage %' 'Cobertura %')) } }
-    objects = [ordered]@{
-      values = @(
-        (Prop @{ fontSize = (LitNum 8) }),
-        (Prop @{ backColor = (ColorByMeasure 'Coverage Color'); fontColor = (ColorByMeasure 'Coverage Font Color') } ([ordered]@{ data = $AllPoints.data; metadata = "$M.Coverage %" })))
-      columnHeaders = @(Prop @{ fontSize = (LitNum 8) })
-      rowHeaders = @(Prop @{ fontSize = (LitNum 8) })
-      subTotals = @(Prop @{ rowSubtotals = (LitBool $false); columnSubtotals = (LitBool $false) })
-    }
-    visualContainerObjects = (TitleObj $title)
-    drillFilterOtherVisuals = $true
-  }
-}
 
 # ---------- elementos comunes ----------
 $W = 1280; $H = 720; $L = 24; $FW = 1232; $LW = 604; $RX = 652

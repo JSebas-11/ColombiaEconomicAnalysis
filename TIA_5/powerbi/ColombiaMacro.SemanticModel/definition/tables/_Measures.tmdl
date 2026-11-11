@@ -96,11 +96,6 @@ table _Measures
 		displayFolder: Base
 		lineageTag: c2c7b254-4e51-46bb-9501-77805f3e3d27
 
-	measure 'GDP Growth' = AVERAGE ( FactQuarterly[RealGdpGrowth] )
-		formatString: 0.00\%
-		displayFolder: Base
-		lineageTag: 20542b99-dc8f-4833-b955-605424b67262
-
 	measure 'Inflation Latest' = CALCULATE ( [Inflation YoY], LASTDATE ( DimDate[Date] ) )
 		formatString: 0.00\%
 		displayFolder: KPI Cards
@@ -128,11 +123,6 @@ table _Measures
 		displayFolder: KPI Cards
 		lineageTag: dad43844-48c4-4ffa-9683-9397db273b42
 
-	measure 'GDP Growth Latest' = CALCULATE ( [GDP Growth], LASTNONBLANK ( DimDate[Date], CALCULATE ( COUNTROWS ( FactQuarterly ) ) ) )
-		formatString: 0.00\%
-		displayFolder: KPI Cards
-		lineageTag: bc030e1a-d681-4737-a060-03d930a8b35b
-
 	measure 'Inflation Window Avg' = CALCULATE ( [Inflation YoY], ALL ( DimDate ) )
 		formatString: 0.00\%
 		displayFolder: KPI Cards
@@ -157,11 +147,6 @@ table _Measures
 		formatString: 0.00\%
 		displayFolder: KPI Cards
 		lineageTag: d0df26a4-5229-4306-a63d-4ed9f0457027
-
-	measure 'GDP Growth Window Avg' = CALCULATE ( [GDP Growth], ALL ( DimDate ) )
-		formatString: 0.00\%
-		displayFolder: KPI Cards
-		lineageTag: b24c8a1b-6e5f-45ed-9042-a2e42ae43085
 
 	measure 'Inflation Start' = CALCULATE ( [Inflation YoY], FIRSTDATE ( DimDate[Date] ) )
 		formatString: 0.00\%
@@ -213,10 +198,6 @@ table _Measures
 		displayFolder: Terms
 		lineageTag: f9630e9f-d3b3-43fe-8a4c-0703d4148c1b
 
-	measure 'Coverage %' = SUM ( CoverageByYear[CoveragePercent] )
-		formatString: 0
-		displayFolder: Statistics
-
 	measure 'Empty Cells' = SUM ( MissingDataSummary[EmptyInWindow] ) + 0
 		formatString: 0
 		displayFolder: Statistics
@@ -228,12 +209,6 @@ table _Measures
 		displayFolder: Colors
 
 	measure 'Outlier Color' = IF ( [Outliers] > 0, "#0b0b0b", SWITCH ( SELECTEDVALUE ( DimSeries[SeriesKey] ), "Inflation YoY", "#eb6834", "Policy Rate", "#2a78d6", "TRM", "#008300", "COLCAP", "#6250d6", "COLCAP Monthly Return", "#6250d6", "Unemployment Rate", "#e34948", "Occupation Rate", "#e87ba4", "Real GDP Growth", "#1baf7a", "#52514e" ) )
-		displayFolder: Colors
-
-	measure 'Coverage Color' = VAR c = [Coverage %] RETURN SWITCH ( TRUE (), ISBLANK ( c ), BLANK (), c >= 100, "#2a78d6", c >= 50, "#7fb0e8", c > 0, "#cfe1f7", "#ffffff" )
-		displayFolder: Colors
-
-	measure 'Coverage Font Color' = IF ( [Coverage %] >= 100, "#ffffff", "#0b0b0b" )
 		displayFolder: Colors
 
 	column Placeholder

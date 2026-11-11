@@ -11,16 +11,12 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["CorrelationSummary","CoverageByYear","DimDate","DimSeries","FactMetricLong","FactMonthly","FactOutliers","FactQuarterly","MissingDataSummary","_Measures","DataFolder"]
+annotation PBI_QueryOrder = ["DimDate","DimSeries","FactMetricLong","FactMonthly","MissingDataSummary","_Measures","DataFolder"]
 
-ref table CorrelationSummary
-ref table CoverageByYear
 ref table DimDate
 ref table DimSeries
 ref table FactMetricLong
 ref table FactMonthly
-ref table FactOutliers
-ref table FactQuarterly
 ref table MissingDataSummary
 ref table _Measures
 

@@ -1,6 +1,11 @@
 """Builds the Power BI input tables for the TIA 5 dashboard.
 
 Run with: python3 TIA_5/build_powerbi_data.py
+
+Loaded by the report: dim_date, dim_series, fact_monthly, fact_metric_long,
+missing_data_summary. Written as evidence only, not loaded: fact_outliers
+(the 50 IQR outliers and their events) and correlation_summary (the
+correlations quoted on the dashboard).
 """
 
 from __future__ import annotations
@@ -17,7 +22,6 @@ OUTPUT_DIR = TIA5_DIR / "powerbi" / "data"
 
 WINDOW_START = date(2008, 1, 1)
 WINDOW_END = date(2026, 7, 1)
-COVERAGE_FIRST_YEAR = 2000
 
 MONTH_NAMES = (
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -350,16 +354,6 @@ class PowerBiTables:
             for period in self.dataset.window_months
         ]
 
-    def fact_quarterly(self) -> list[dict[str, object]]:
-        return [
-            {
-                "Date": period.isoformat(),
-                "QuarterLabel": quarter_label(period),
-                "RealGdpGrowth": value,
-            }
-            for period, value in self.dataset.in_window("Real GDP Growth").items()
-        ]
-
     def fact_metric_long(self) -> list[dict[str, object]]:
         return [
             {
@@ -418,27 +412,6 @@ class PowerBiTables:
             })
         return rows
 
-    def coverage_by_year(self) -> list[dict[str, object]]:
-        rows: list[dict[str, object]] = []
-        for series in SERIES:
-            quarterly = series.frequency == "Quarterly"
-            all_periods = months_between(date(COVERAGE_FIRST_YEAR, 1, 1), WINDOW_END)
-            for year in range(COVERAGE_FIRST_YEAR, WINDOW_END.year + 1):
-                expected = [
-                    period for period in all_periods
-                    if period.year == year and (not quarterly or period.month % 3 == 0)
-                ]
-                observed = sum(period in self.dataset.observations[series.key] for period in expected)
-                rows.append({
-                    "SeriesKey": series.key,
-                    "Year": year,
-                    "ExpectedPeriods": len(expected),
-                    "ObservedPeriods": observed,
-                    "CoveragePercent": round(100 * observed / len(expected), 1),
-                    "InAnalysisWindow": int(year >= WINDOW_START.year),
-                })
-        return rows
-
     def missing_data_summary(self) -> list[dict[str, object]]:
         rows: list[dict[str, object]] = []
         for series in SERIES:
@@ -452,37 +425,6 @@ class PowerBiTables:
                 "EmptyInWindow": expected - observed,
                 "PreWindowGap": series.pre_window_gap,
                 "TreatmentInWindow": series.in_window_treatment,
-            })
-        return rows
-
-    def term_summary_expected(self) -> list[dict[str, object]]:
-        """Reconciliation values for the DAX measures. Not imported into the model."""
-        rows: list[dict[str, object]] = []
-        for term in TERMS:
-            months = months_between(term.first_month, term.last_month)
-            metric = lambda key: [
-                self.dataset.observations[key][period]
-                for period in months if period in self.dataset.observations[key]
-            ]
-            inflation, policy, trm = metric("Inflation YoY"), metric("Policy Rate"), metric("TRM")
-            colcap, unemployment = metric("COLCAP"), metric("Unemployment Rate")
-            gdp = metric("Real GDP Growth")
-            rows.append({
-                "Term": term.label,
-                "President": term.president,
-                "Months": len(months),
-                "InflationAvg": round(statistics.mean(inflation), 2),
-                "InflationStart": round(inflation[0], 2),
-                "InflationEnd": round(inflation[-1], 2),
-                "PolicyAvg": round(statistics.mean(policy), 2),
-                "PolicyStart": round(policy[0], 2),
-                "PolicyEnd": round(policy[-1], 2),
-                "TrmAvg": round(statistics.mean(trm), 2),
-                "TrmChangePercent": round(100 * (trm[-1] / trm[0] - 1), 1),
-                "ColcapChangePercent": round(100 * (colcap[-1] / colcap[0] - 1), 1),
-                "UnemploymentAvg": round(statistics.mean(unemployment), 2),
-                "GdpGrowthAvg": round(statistics.mean(gdp), 2),
-                "GdpQuarters": len(gdp),
             })
         return rows
 
@@ -502,13 +444,10 @@ def main() -> None:
     write_table("dim_date", tables.dim_date())
     write_table("dim_series", tables.dim_series())
     write_table("fact_monthly", tables.fact_monthly())
-    write_table("fact_quarterly", tables.fact_quarterly())
     write_table("fact_metric_long", tables.fact_metric_long())
+    write_table("missing_data_summary", tables.missing_data_summary())
     write_table("fact_outliers", tables.fact_outliers())
     write_table("correlation_summary", tables.correlation_summary())
-    write_table("coverage_by_year", tables.coverage_by_year())
-    write_table("missing_data_summary", tables.missing_data_summary())
-    write_table("term_summary_expected", tables.term_summary_expected())
 
 
 if __name__ == "__main__":

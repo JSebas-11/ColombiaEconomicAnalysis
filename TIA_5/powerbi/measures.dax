@@ -44,8 +44,6 @@ Unemployment Rate = AVERAGE ( FactMonthly[UnemploymentRate] )
 
 Occupation Rate = AVERAGE ( FactMonthly[OccupationRate] )
 
-GDP Growth = AVERAGE ( FactQuarterly[RealGdpGrowth] )
-
 -- ===== KPI cards: latest value in the selection =====
 
 Inflation Latest = CALCULATE ( [Inflation YoY], LASTDATE ( DimDate[Date] ) )
@@ -58,12 +56,6 @@ COLCAP Latest = CALCULATE ( [COLCAP], LASTDATE ( DimDate[Date] ) )
 
 Unemployment Latest = CALCULATE ( [Unemployment Rate], LASTDATE ( DimDate[Date] ) )
 
-GDP Growth Latest =
-CALCULATE (
-    [GDP Growth],
-    LASTNONBLANK ( DimDate[Date], CALCULATE ( COUNTROWS ( FactQuarterly ) ) )
-)
-
 -- ===== KPI cards: full window average, ignores slicers =====
 
 Inflation Window Avg = CALCULATE ( [Inflation YoY], ALL ( DimDate ) )
@@ -75,8 +67,6 @@ TRM Window Avg = CALCULATE ( [TRM], ALL ( DimDate ) )
 COLCAP Window Avg = CALCULATE ( [COLCAP], ALL ( DimDate ) )
 
 Unemployment Window Avg = CALCULATE ( [Unemployment Rate], ALL ( DimDate ) )
-
-GDP Growth Window Avg = CALCULATE ( [GDP Growth], ALL ( DimDate ) )
 
 -- ===== Term comparison: first and last month of each term =====
 
