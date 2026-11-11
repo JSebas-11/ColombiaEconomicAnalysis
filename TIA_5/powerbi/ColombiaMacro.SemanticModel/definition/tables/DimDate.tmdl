@@ -3,7 +3,7 @@ table DimDate
 
 	column Date
 		dataType: dateTime
-		formatString: mmm yyyy
+		formatString: mm/yyyy
 		lineageTag: a513bb52-6b3d-453f-8b3d-176e3ccd8561
 		summarizeBy: none
 		sourceColumn: Date
@@ -74,6 +74,11 @@ table DimDate
 		sourceColumn: OfficialTermEnd
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column Gobierno = SUBSTITUTE ( DimDate[TermLabel], "(partial)", "(parcial)" )
+		dataType: string
+		summarizeBy: none
+		sortByColumn: TermOrder
 
 	partition DimDate = m
 		mode: import

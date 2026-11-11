@@ -28,6 +28,7 @@
                                                                                                        },
                                                                                              "queryRef":  "DimDate.Date",
                                                                                              "nativeQueryRef":  "Date",
+                                                                                             "displayName":  "Mes",
                                                                                              "active":  true
                                                                                          }
                                                                                      ]
@@ -46,7 +47,8 @@
                                                                                                                 }
                                                                                                 },
                                                                                       "queryRef":  "_Measures.TRM Rebased",
-                                                                                      "nativeQueryRef":  "TRM Rebased"
+                                                                                      "nativeQueryRef":  "TRM Rebased",
+                                                                                      "displayName":  "TRM"
                                                                                   },
                                                                                   {
                                                                                       "field":  {
@@ -60,7 +62,8 @@
                                                                                                                 }
                                                                                                 },
                                                                                       "queryRef":  "_Measures.COLCAP Rebased",
-                                                                                      "nativeQueryRef":  "COLCAP Rebased"
+                                                                                      "nativeQueryRef":  "COLCAP Rebased",
+                                                                                      "displayName":  "COLCAP"
                                                                                   }
                                                                               ]
                                                           }
@@ -155,7 +158,7 @@
                                                                             "titleText":  {
                                                                                               "expr":  {
                                                                                                            "Literal":  {
-                                                                                                                           "Value":  "\u0027index\u0027"
+                                                                                                                           "Value":  "\u0027índice, enero de 2008 = 100\u0027"
                                                                                                                        }
                                                                                                        }
                                                                                           }
@@ -190,7 +193,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027Q2. Peso (TRM) and COLCAP, January 2008 = 100\u0027"
+                                                                                                                                 "Value":  "\u0027P2. Peso (TRM) y COLCAP casi no se mueven juntos\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -204,26 +207,24 @@
                                                                                    }
                                                                 }
                                                             ],
-                                                  "subTitle":  [
-                                                                   {
-                                                                       "properties":  {
-                                                                                          "text":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "\u0027Correlation −0.14: they barely move together, so USD and equity exposure are separate decisions\u0027"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   },
-                                                                                          "show":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "true"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   }
-                                                                                      }
-                                                                   }
-                                                               ]
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "text":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "\u0027Correlación de −0.14: dólar y acciones son decisiones separadas\u0027"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               },
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "true"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

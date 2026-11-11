@@ -23,11 +23,12 @@
                                                                                                                                                                "Entity":  "DimDate"
                                                                                                                                                            }
                                                                                                                                          },
-                                                                                                                          "Property":  "TermLabel"
+                                                                                                                          "Property":  "Gobierno"
                                                                                                                       }
                                                                                                        },
-                                                                                             "queryRef":  "DimDate.TermLabel",
-                                                                                             "nativeQueryRef":  "TermLabel",
+                                                                                             "queryRef":  "DimDate.Gobierno",
+                                                                                             "nativeQueryRef":  "Gobierno",
+                                                                                             "displayName":  "Gobierno",
                                                                                              "active":  true
                                                                                          }
                                                                                      ]
@@ -47,7 +48,7 @@
                                                                                                 },
                                                                                       "queryRef":  "_Measures.Inflation Start",
                                                                                       "nativeQueryRef":  "Inflation Start",
-                                                                                      "displayName":  "First month"
+                                                                                      "displayName":  "Primer mes"
                                                                                   },
                                                                                   {
                                                                                       "field":  {
@@ -62,7 +63,7 @@
                                                                                                 },
                                                                                       "queryRef":  "_Measures.Inflation End",
                                                                                       "nativeQueryRef":  "Inflation End",
-                                                                                      "displayName":  "Last month"
+                                                                                      "displayName":  "Último mes"
                                                                                   }
                                                                               ]
                                                           }
@@ -77,7 +78,7 @@
                                                                                                                                            "Entity":  "DimDate"
                                                                                                                                        }
                                                                                                                      },
-                                                                                                      "Property":  "TermLabel"
+                                                                                                      "Property":  "Gobierno"
                                                                                                   }
                                                                                    },
                                                                          "direction":  "Ascending"
@@ -157,7 +158,7 @@
                                                                             "titleText":  {
                                                                                               "expr":  {
                                                                                                            "Literal":  {
-                                                                                                                           "Value":  "\u0027% YoY\u0027"
+                                                                                                                           "Value":  "\u0027% anual\u0027"
                                                                                                                        }
                                                                                                        }
                                                                                           }
@@ -212,7 +213,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027Q4. Inflation in the first and last month of each term\u0027"
+                                                                                                                                 "Value":  "\u0027P4. Inflación al inicio y al final de cada gobierno\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -226,26 +227,24 @@
                                                                                    }
                                                                 }
                                                             ],
-                                                  "subTitle":  [
-                                                                   {
-                                                                       "properties":  {
-                                                                                          "text":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "\u0027Duque: 3.10% to 10.21%. Petro: 10.84% to 6.03%. Term averages alone hide this\u0027"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   },
-                                                                                          "show":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "true"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   }
-                                                                                      }
-                                                                   }
-                                                               ]
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "text":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "\u0027Duque: de 3.10% a 10.21%. Petro: de 10.84% a 6.03%\u0027"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               },
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "true"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

@@ -3,9 +3,9 @@
     "name":  "kpi2",
     "position":  {
                      "x":  652,
-                     "y":  262,
+                     "y":  276,
                      "z":  2000,
-                     "height":  166,
+                     "height":  180,
                      "width":  296,
                      "tabOrder":  2000
                  },
@@ -28,7 +28,7 @@
                                                                                                      },
                                                                                            "queryRef":  "_Measures.TRM Latest",
                                                                                            "nativeQueryRef":  "TRM Latest",
-                                                                                           "displayName":  "July 2026"
+                                                                                           "displayName":  "Julio de 2026"
                                                                                        }
                                                                                    ]
                                                                }
@@ -101,7 +101,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027TRM (COP PER USD)\u0027"
+                                                                                                                                 "Value":  "\u0027TRM (COP POR USD)\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -114,7 +114,18 @@
                                                                                                 }
                                                                                    }
                                                                 }
-                                                            ]
+                                                            ],
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "false"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

@@ -130,6 +130,15 @@ table DimSeries
 		summarizeBy: none
 		sourceColumn: OutlierPercent
 
+	column Serie = SWITCH ( DimSeries[SeriesKey], "Inflation YoY", "Inflación anual", "Policy Rate", "Tasa de política", "COLCAP Monthly Return", "Rendimiento COLCAP", "Unemployment Rate", "Desempleo", "Occupation Rate", "Tasa de ocupación", "Real GDP Growth", "Crecimiento PIB real", DimSeries[SeriesKey] )
+		dataType: string
+		summarizeBy: none
+		sortByColumn: SeriesOrder
+
+	column Unidad = SWITCH ( DimSeries[Unit], "COP per USD", "COP por USD", "Index points", "puntos", DimSeries[Unit] )
+		dataType: string
+		summarizeBy: none
+
 	partition DimSeries = m
 		mode: import
 		source =

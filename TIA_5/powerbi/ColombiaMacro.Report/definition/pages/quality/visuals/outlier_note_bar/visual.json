@@ -2,12 +2,12 @@
     "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
     "name":  "outlier_note_bar",
     "position":  {
-                     "x":  652,
-                     "y":  494,
-                     "z":  2400,
-                     "height":  198,
+                     "x":  24,
+                     "y":  518,
+                     "z":  1900,
+                     "height":  174,
                      "width":  4,
-                     "tabOrder":  2400
+                     "tabOrder":  1900
                  },
     "visual":  {
                    "visualType":  "basicShape",

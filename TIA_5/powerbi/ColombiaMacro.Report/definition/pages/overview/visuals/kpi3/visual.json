@@ -3,9 +3,9 @@
     "name":  "kpi3",
     "position":  {
                      "x":  960,
-                     "y":  262,
+                     "y":  276,
                      "z":  2200,
-                     "height":  166,
+                     "height":  180,
                      "width":  296,
                      "tabOrder":  2200
                  },
@@ -28,7 +28,7 @@
                                                                                                      },
                                                                                            "queryRef":  "_Measures.COLCAP Latest",
                                                                                            "nativeQueryRef":  "COLCAP Latest",
-                                                                                           "displayName":  "July 2026"
+                                                                                           "displayName":  "Julio de 2026"
                                                                                        }
                                                                                    ]
                                                                }
@@ -101,7 +101,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027COLCAP (POINTS)\u0027"
+                                                                                                                                 "Value":  "\u0027COLCAP (PUNTOS)\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -114,7 +114,18 @@
                                                                                                 }
                                                                                    }
                                                                 }
-                                                            ]
+                                                            ],
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "false"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

@@ -3,14 +3,7 @@
     "pageOrder":  [
                       "overview",
                       "quality",
-                      "story",
-                      "b_p1_overview",
-                      "b_p2_quality",
-                      "b_p3_outliers",
-                      "b_p4_rates",
-                      "b_p5_markets",
-                      "b_p6_real",
-                      "b_p7_terms"
+                      "story"
                   ],
     "activePageName":  "overview"
 }

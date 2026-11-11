@@ -3,11 +3,11 @@
     "name":  "missing_note",
     "position":  {
                      "x":  24,
-                     "y":  296,
-                     "z":  1600,
-                     "height":  132,
+                     "y":  358,
+                     "z":  1500,
+                     "height":  150,
                      "width":  604,
-                     "tabOrder":  1600
+                     "tabOrder":  1500
                  },
     "visual":  {
                    "visualType":  "textbox",
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "MISSING DATA: IDENTIFY, EXPLAIN, ACT",
+                                                                                                                      "value":  "DATOS FALTANTES: IDENTIFICAR, EXPLICAR, ACTUAR",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "9pt",
@@ -32,7 +32,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Identify: ",
+                                                                                                                      "value":  "Identificar: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -41,7 +41,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "1 of 1,561 monthly cells is empty (0.06%), the January 2008 COLCAP return. GDP has none.",
+                                                                                                                      "value":  "1 de 1561 celdas mensuales está vacía (0.06%), el rendimiento del COLCAP de enero de 2008. El PIB no tiene vacíos.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -53,7 +53,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Why: ",
+                                                                                                                      "value":  "Causa: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -62,7 +62,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "a return needs the previous month, which predates the index. Older gaps are series start dates.",
+                                                                                                                      "value":  "un rendimiento necesita el mes anterior, que es previo al índice. Los vacíos más antiguos son fechas de inicio de cada serie.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -74,7 +74,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Action: ",
+                                                                                                                      "value":  "Acción: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -83,7 +83,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "no imputation. Filling a value that cannot exist would invent data.",
+                                                                                                                      "value":  "no se imputa. Rellenar un valor que no puede existir sería inventar datos.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -95,7 +95,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Impact: ",
+                                                                                                                      "value":  "Impacto: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -104,7 +104,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "returns have 222 observations instead of 223, and pre-2008 history is left out.",
+                                                                                                                      "value":  "los rendimientos tienen 222 observaciones en lugar de 223 y se excluye la historia anterior a 2008.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",

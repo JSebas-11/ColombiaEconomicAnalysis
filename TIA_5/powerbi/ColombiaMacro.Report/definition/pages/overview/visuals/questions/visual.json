@@ -3,9 +3,9 @@
     "name":  "questions",
     "position":  {
                      "x":  24,
-                     "y":  270,
+                     "y":  306,
                      "z":  1500,
-                     "height":  160,
+                     "height":  150,
                      "width":  604,
                      "tabOrder":  1500
                  },
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "FOUR QUESTIONS",
+                                                                                                                      "value":  "CUATRO PREGUNTAS",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "9pt",
@@ -32,7 +32,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "1.  Does the policy rate follow inflation, and with what delay?",
+                                                                                                                      "value":  "1.  ¿La tasa de política sigue a la inflación? ¿Con cuánto rezago?",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "12pt",
@@ -44,7 +44,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "2.  Do the peso and COLCAP move together?",
+                                                                                                                      "value":  "2.  ¿El peso y el COLCAP se mueven juntos?",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "12pt",
@@ -56,7 +56,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "3.  How hard did COVID hit jobs, and how fast did they recover?",
+                                                                                                                      "value":  "3.  ¿Qué tan fuerte golpeó el COVID al empleo y qué tan rápido se recuperó?",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "12pt",
@@ -68,7 +68,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "4.  How did conditions change within each presidential term?",
+                                                                                                                      "value":  "4.  ¿Cómo cambiaron las condiciones dentro de cada gobierno?",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "12pt",

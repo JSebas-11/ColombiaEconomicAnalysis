@@ -2,12 +2,12 @@
     "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
     "name":  "outlier_note",
     "position":  {
-                     "x":  652,
-                     "y":  494,
-                     "z":  2300,
-                     "height":  198,
+                     "x":  24,
+                     "y":  518,
+                     "z":  1800,
+                     "height":  174,
                      "width":  604,
-                     "tabOrder":  2300
+                     "tabOrder":  1800
                  },
     "visual":  {
                    "visualType":  "textbox",
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "OUTLIERS: INVESTIGATE AND DECIDE",
+                                                                                                                      "value":  "DATOS ATÍPICOS: INVESTIGAR Y DECIDIR",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "9pt",
@@ -32,7 +32,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Investigate: ",
+                                                                                                                      "value":  "Investigar: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -41,7 +41,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "they cluster in known episodes: the 2008 crisis, the COVID crash (COLCAP −27.48%, unemployment 21.97%), the 2022 election sell-off, the 2022-23 inflation peak (13.34%) and record highs in January 2026.",
+                                                                                                                      "value":  "se concentran en episodios conocidos: la crisis de 2008, la caída por el COVID (COLCAP −27.48%, desempleo 21.97%), la venta masiva por las elecciones de 2022, el pico de inflación de 2022-23 (13.34%) y los máximos históricos de enero de 2026.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -53,7 +53,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Errors? None found. Market and GDP extremes match press and DANE reports.",
+                                                                                                                      "value":  "¿Errores? Ninguno. Los extremos del mercado y del PIB coinciden con reportes de prensa y del DANE.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -65,7 +65,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Decision: ",
+                                                                                                                      "value":  "Decisión: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -74,7 +74,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "keep all 50. Removing them would understate risk and erase the episodes the analysis is about.",
+                                                                                                                      "value":  "se conservan los 50. Eliminarlos subestimaría el riesgo y borraría los episodios que son el objeto del análisis.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -86,7 +86,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Impact: ",
+                                                                                                                      "value":  "Impacto: ",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",
@@ -95,7 +95,7 @@
                                                                                                                                     }
                                                                                                                   },
                                                                                                                   {
-                                                                                                                      "value":  "averages stay sensitive to extremes, so the median is shown next to the mean.",
+                                                                                                                      "value":  "los promedios siguen siendo sensibles a los extremos; por eso la mediana se muestra junto a la media.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "10pt",

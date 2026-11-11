@@ -23,12 +23,12 @@
                                                                                                                                                              "Entity":  "DimDate"
                                                                                                                                                          }
                                                                                                                                        },
-                                                                                                                        "Property":  "TermLabel"
+                                                                                                                        "Property":  "Gobierno"
                                                                                                                     }
                                                                                                      },
-                                                                                           "queryRef":  "DimDate.TermLabel",
-                                                                                           "nativeQueryRef":  "TermLabel",
-                                                                                           "displayName":  "Presidential term",
+                                                                                           "queryRef":  "DimDate.Gobierno",
+                                                                                           "nativeQueryRef":  "Gobierno",
+                                                                                           "displayName":  "Gobierno",
                                                                                            "active":  true
                                                                                        }
                                                                                    ]
@@ -44,7 +44,7 @@
                                                                                                                                            "Entity":  "DimDate"
                                                                                                                                        }
                                                                                                                      },
-                                                                                                      "Property":  "TermLabel"
+                                                                                                      "Property":  "Gobierno"
                                                                                                   }
                                                                                    },
                                                                          "direction":  "Ascending"

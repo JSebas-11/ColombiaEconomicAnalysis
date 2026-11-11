@@ -5,7 +5,7 @@
                      "x":  24,
                      "y":  84,
                      "z":  1400,
-                     "height":  176,
+                     "height":  214,
                      "width":  604,
                      "tabOrder":  1400
                  },
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "THE DECISION",
+                                                                                                                      "value":  "LA DECISIÓN",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "9pt",
@@ -32,7 +32,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "A Colombian asset manager\u0027s investment committee must decide how to adjust exposure to fixed income, Colombian equities and US dollars as the macro cycle turns.",
+                                                                                                                      "value":  "El comité de inversiones de una gestora de activos colombiana debe decidir cómo ajustar su exposición a renta fija, acciones colombianas y dólares a lo largo del ciclo macroeconómico.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "12pt",
@@ -56,7 +56,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "THE DATA",
+                                                                                                                      "value":  "LOS DATOS",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "9pt",
@@ -69,7 +69,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Seven Colombian macro indicators: inflation, policy rate, exchange rate (TRM), the COLCAP stock index, unemployment, occupation and real GDP growth. Source: Banco de la República statistics. Window: January 2008 to July 2026, 223 months and 74 quarters.",
+                                                                                                                      "value":  "Siete indicadores macroeconómicos de Colombia: inflación, tasa de política monetaria, tasa de cambio (TRM), índice accionario COLCAP, desempleo, tasa de ocupación y crecimiento real del PIB. Fuente: estadísticas del Banco de la República. Periodo: enero de 2008 a julio de 2026, 223 meses y 74 trimestres.",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI",
                                                                                                                                         "fontSize":  "11pt",

@@ -217,6 +217,10 @@ table _Measures
 		formatString: 0
 		displayFolder: Statistics
 
+	measure 'Empty Cells' = SUM ( MissingDataSummary[EmptyInWindow] ) + 0
+		formatString: 0
+		displayFolder: Statistics
+
 	measure 'Real Rate Color' = IF ( [Real Policy Rate] < 0, "#e34948", "#2a78d6" )
 		displayFolder: Colors
 

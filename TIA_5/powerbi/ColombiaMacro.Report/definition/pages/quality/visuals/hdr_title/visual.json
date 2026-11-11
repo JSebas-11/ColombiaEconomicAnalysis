@@ -6,7 +6,7 @@
                      "y":  32,
                      "z":  1300,
                      "height":  44,
-                     "width":  960,
+                     "width":  980,
                      "tabOrder":  1300
                  },
     "visual":  {
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "The data is complete, and the extremes are real events",
+                                                                                                                      "value":  "Los datos están completos y los extremos son eventos reales",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI Semibold",
                                                                                                                                         "fontSize":  "20pt",

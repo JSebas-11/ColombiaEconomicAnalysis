@@ -5,7 +5,7 @@
                      "x":  960,
                      "y":  84,
                      "z":  1800,
-                     "height":  166,
+                     "height":  180,
                      "width":  296,
                      "tabOrder":  1800
                  },
@@ -28,7 +28,7 @@
                                                                                                      },
                                                                                            "queryRef":  "_Measures.Policy Rate Latest",
                                                                                            "nativeQueryRef":  "Policy Rate Latest",
-                                                                                           "displayName":  "July 2026"
+                                                                                           "displayName":  "Julio de 2026"
                                                                                        }
                                                                                    ]
                                                                }
@@ -101,7 +101,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027POLICY RATE (%)\u0027"
+                                                                                                                                 "Value":  "\u0027TASA DE POLÍTICA (%)\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -114,7 +114,18 @@
                                                                                                 }
                                                                                    }
                                                                 }
-                                                            ]
+                                                            ],
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "false"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

@@ -28,6 +28,7 @@
                                                                                                        },
                                                                                              "queryRef":  "DimDate.Date",
                                                                                              "nativeQueryRef":  "Date",
+                                                                                             "displayName":  "Mes",
                                                                                              "active":  true
                                                                                          }
                                                                                      ]
@@ -46,7 +47,8 @@
                                                                                                                 }
                                                                                                 },
                                                                                       "queryRef":  "_Measures.Inflation YoY",
-                                                                                      "nativeQueryRef":  "Inflation YoY"
+                                                                                      "nativeQueryRef":  "Inflation YoY",
+                                                                                      "displayName":  "Inflación anual"
                                                                                   },
                                                                                   {
                                                                                       "field":  {
@@ -60,7 +62,8 @@
                                                                                                                 }
                                                                                                 },
                                                                                       "queryRef":  "_Measures.Policy Rate",
-                                                                                      "nativeQueryRef":  "Policy Rate"
+                                                                                      "nativeQueryRef":  "Policy Rate",
+                                                                                      "displayName":  "Tasa de política"
                                                                                   }
                                                                               ]
                                                           }
@@ -155,7 +158,7 @@
                                                                             "titleText":  {
                                                                                               "expr":  {
                                                                                                            "Literal":  {
-                                                                                                                           "Value":  "\u0027% per year\u0027"
+                                                                                                                           "Value":  "\u0027% anual\u0027"
                                                                                                                        }
                                                                                                        }
                                                                                           }
@@ -190,7 +193,7 @@
                                                                                        "text":  {
                                                                                                     "expr":  {
                                                                                                                  "Literal":  {
-                                                                                                                                 "Value":  "\u0027Q1. Inflation and the policy rate\u0027"
+                                                                                                                                 "Value":  "\u0027P1. La tasa de política sigue a la inflación, con rezago\u0027"
                                                                                                                              }
                                                                                                              }
                                                                                                 },
@@ -204,26 +207,24 @@
                                                                                    }
                                                                 }
                                                             ],
-                                                  "subTitle":  [
-                                                                   {
-                                                                       "properties":  {
-                                                                                          "text":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "\u0027Correlation 0.80 in the same month and 0.88 six months later: the rate reacts with a delay\u0027"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   },
-                                                                                          "show":  {
-                                                                                                       "expr":  {
-                                                                                                                    "Literal":  {
-                                                                                                                                    "Value":  "true"
-                                                                                                                                }
-                                                                                                                }
-                                                                                                   }
-                                                                                      }
-                                                                   }
-                                                               ]
+                                                  "subTitle":  {
+                                                                   "properties":  {
+                                                                                      "text":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "\u0027Correlación: 0.80 en el mismo mes y 0.88 seis meses después\u0027"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               },
+                                                                                      "show":  {
+                                                                                                   "expr":  {
+                                                                                                                "Literal":  {
+                                                                                                                                "Value":  "true"
+                                                                                                                            }
+                                                                                                            }
+                                                                                               }
+                                                                                  }
+                                                               }
                                               },
                    "drillFilterOtherVisuals":  true
                }

@@ -6,7 +6,7 @@
                      "y":  32,
                      "z":  1300,
                      "height":  44,
-                     "width":  960,
+                     "width":  980,
                      "tabOrder":  1300
                  },
     "visual":  {
@@ -19,7 +19,7 @@
                                                                                              {
                                                                                                  "textRuns":  [
                                                                                                                   {
-                                                                                                                      "value":  "Rates follow inflation; markets follow events",
+                                                                                                                      "value":  "Las tasas siguen a la inflación; los mercados, a los eventos",
                                                                                                                       "textStyle":  {
                                                                                                                                         "fontFamily":  "Segoe UI Semibold",
                                                                                                                                         "fontSize":  "20pt",
