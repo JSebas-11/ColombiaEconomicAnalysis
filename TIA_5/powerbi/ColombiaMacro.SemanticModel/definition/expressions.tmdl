@@ -1,5 +1,0 @@
-expression DataFolder = "C:\Users\sebas\Documents\Coding\Python\ColombiaEconomicAnalysis\TIA_5\powerbi\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: 660f26ea-52eb-4e14-a324-aba4406b93cd
-
-	annotation PBI_ResultType = Text
-

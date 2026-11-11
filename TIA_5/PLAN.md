@@ -33,7 +33,7 @@
 
 | File | Purpose |
 | --- | --- |
-| `build_powerbi_data.py` | Regenerates every CSV from `data/final` |
+| `scripts/*.py` and `.ipynb` | One script per CSV, each reading `data/final` (run from `TIA_5/scripts`) |
 | `powerbi/data/*.csv` | Power BI input tables |
 | `powerbi/measures.dax` | DAX measures |
 | `powerbi/theme.json` | Validated color theme |
