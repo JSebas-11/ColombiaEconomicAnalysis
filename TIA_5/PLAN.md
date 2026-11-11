@@ -33,7 +33,7 @@
 
 | File | Purpose |
 | --- | --- |
-| `scripts/*.py` and `.ipynb` | One script per CSV, each reading `data/final` (run from `TIA_5/scripts`) |
+| `scripts/*.ipynb` | One notebook per CSV, each reading `data/final` (run from `TIA_5/scripts`) |
 | `powerbi/data/*.csv` | Power BI input tables |
 | `powerbi/measures.dax` | DAX measures |
 | `powerbi/theme.json` | Validated color theme |
